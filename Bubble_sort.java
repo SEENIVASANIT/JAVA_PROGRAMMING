@@ -30,6 +30,7 @@ class Bubble_Sort_ascending{
 			{
 				if(arry[j]>arry[j+1])
 				{
+					swaping_arry=true;
 					int temp=arry[j];
 					arry[j]=arry[j+1];
 					arry[j+1]=temp;
@@ -46,12 +47,14 @@ class Bubble_Sort_ascending{
 ////////////////DESCENDING ORDER///////////////////////////
 class Bubble_Sort_descending{
 	public static int[] descending(int []arry) {
-		boolean swaping_arry=false;//its array alrady sort or not checking
+		
 		for(int i=1;i<arry.length-1;i++) {
+			boolean swaping_arry=false;//its array alrady sort or not checking
 			for(int j=0;j<arry.length-i;j++)//j<arry.length-i becose fiest pass the last element will be sort so we will check length-i;
 			{
 				if(arry[j]<arry[j+1])
 				{
+					swaping_arry=true;
 					int temp=arry[j];
 					arry[j]=arry[j+1];
 					arry[j+1]=temp;
