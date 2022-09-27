@@ -24,6 +24,7 @@ public class Bubble_sort {
 ////////////ASCENDING ORDER/////////////////////////////
 class Bubble_Sort_ascending{
 	public int[] ascending(int []arry) {
+		boolean swaping_arry=false;//its array alrady sort or not checking
 		for(int i=1;i<arry.length-1;i++) {
 			for(int j=0;j<arry.length-i;j++)//j<arry.length-i becose fiest pass the last element will be sort so we will check length-i;
 			{
@@ -34,6 +35,10 @@ class Bubble_Sort_ascending{
 					arry[j+1]=temp;
 				}
 			}
+			if (!swaping_arry) {//not swaping 
+				System.out.println("array alrady sort!");
+				break;
+			}
 		}
 		return arry;
 	}
@@ -41,6 +46,7 @@ class Bubble_Sort_ascending{
 ////////////////DESCENDING ORDER///////////////////////////
 class Bubble_Sort_descending{
 	public static int[] descending(int []arry) {
+		boolean swaping_arry=false;//its array alrady sort or not checking
 		for(int i=1;i<arry.length-1;i++) {
 			for(int j=0;j<arry.length-i;j++)//j<arry.length-i becose fiest pass the last element will be sort so we will check length-i;
 			{
@@ -50,6 +56,10 @@ class Bubble_Sort_descending{
 					arry[j]=arry[j+1];
 					arry[j+1]=temp;
 				}
+			}
+			if (!swaping_arry) {//not swaping 
+				System.out.println("array alrady sort!");
+				break;
 			}
 		}
 		return arry;
